@@ -3,6 +3,7 @@
   "version": "0.9.18",
   "description": "Javascript client for HashiCorp's Vault",
   "main": "./src/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "precoverage": "npm run lint",
     "coverage": "istanbul cover --report text-summary node_modules/.bin/_mocha",
@@ -12,7 +13,7 @@
     "test-watch": "mocha --watch",
     "predocs": "node scripts/write-features.js",
     "docs": "docco --output docs src/*.js",
-    "precommit": "node scripts/write-features.js && git add features.md"
+    "precommit": "node scripts/write-features.js && git add features.md && node scripts/write-command-types.js && git add types"
   },
   "directories": {
     "example": "./example",
@@ -20,7 +21,7 @@
   },
   "files": [
     "src",
-    "index.d.ts"
+    "types"
   ],
   "dependencies": {
     "debug": "3.1.0",
@@ -41,7 +42,9 @@
     "eslint-plugin-react": "^5.2.2",
     "husky": "^0.14.3",
     "istanbul": "^0.4.5",
+    "json-schema-to-typescript": "^9.1.1",
     "mocha": "6.0.2",
+    "prettier": "^2.0.5",
     "sinon": "1.17.3",
     "sinon-chai": "^2.8.0"
   },
@@ -60,6 +63,7 @@
   "contributors": [
     "Adam Kelsall (https://github.com/adamkelsall)",
     "Alex Early (https://github.com/aearly)",
+    "Andrew Kovaliov (https://github.com/pnkov)",
     "Brandon Ros (https://github.com/brandonros)",
     "Charles Phillips (https://github.com/doublerebel)",
     "David Drewery (https://github.com/EXPEddrewery)",
