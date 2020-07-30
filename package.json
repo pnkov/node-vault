@@ -1,5 +1,5 @@
 {
-  "name": "node-vault",
+  "name": "@pnkov/node-vault",
   "version": "0.9.18",
   "description": "Javascript client for HashiCorp's Vault",
   "main": "./src/index.js",
