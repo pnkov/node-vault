@@ -1024,6 +1024,12 @@ module.exports = {
           period: {
             type: 'integer',
           },
+          token_policies: {
+            type: 'array',
+            items: {
+              type: 'string',
+            },
+          },
         },
       },
     },

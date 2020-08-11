@@ -307,6 +307,7 @@ export namespace req {
         token_ttl?: number;
         token_max_ttl?: number;
         period?: number;
+        token_policies?: string[];
         [k: string]: unknown;
     } | void;
 
