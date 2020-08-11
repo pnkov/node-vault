@@ -18,6 +18,7 @@ export namespace req {
         key?: string;
         reset?: boolean;
         migrate?: boolean;
+        secret_shares?: number;
         [k: string]: unknown;
     } | void;
 
