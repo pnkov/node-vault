@@ -27,7 +27,7 @@ declare namespace NodeVault {
         };
     }
 
-    export interface client extends commands {
+    interface client extends commands {
         handleVaultResponse(res?: { statusCode: number, request: Option, body: any }): Promise<any>;
         apiVersion: string;
         endpoint: string;
