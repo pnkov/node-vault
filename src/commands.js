@@ -145,6 +145,9 @@ module.exports = {
           migrate: {
             type: 'boolean',
           },
+          secret_shares: {
+            type: 'integer',
+          },
         },
       },
       res: sealStatusResponse,
